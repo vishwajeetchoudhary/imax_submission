@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iMax Voice Assistant</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>iMax Voice Assistant</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="scenario-selector">
+            <h2>Select a Scenario</h2>
+            <div class="scenario-options">
+                <div class="scenario-option" data-scenario="1" data-needs-email="true">
+                    <h3>Demo Scheduling</h3>
+                    <p>Schedule a product demonstration with a customer</p>
+                </div>
+                <div class="scenario-option" data-scenario="2" data-needs-email="true">
+                    <h3>Candidate Interview</h3>
+                    <p>Conduct an initial screening interview with a job candidate</p>
+                </div>
+                <div class="scenario-option" data-scenario="3" data-needs-email="true">
+                    <h3>Payment Follow-up</h3>
+                    <p>Follow up with customers about outstanding payments</p>
+                </div>
+            </div>
+            
+            <div class="email-input">
+                <label for="user-email">Enter customer email:</label>
+                <input type="email" id="user-email" placeholder="customer@example.com">
+            </div>
+            
+            <button id="start-assistant" class="start-button" disabled>Start Assistant</button>
+        </div>
+        
+        <div class="voice-interface">
+            <h2>Voice Interaction</h2>
+            
+            <button class="mic-button">
+                <i class="fas fa-microphone"></i>
+            </button>
+            
+            <div class="status"></div>
+        </div>
+        
+        <div class="conversation">
+            <h2>Conversation</h2>
+            <div id="messages-container"></div>
+        </div>
+    </div>
+    
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="/static/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js"></script>
+</body>
+</html>

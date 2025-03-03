@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #6b96c5;
+    --accent-color: #e3f2fd;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+}
+
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.scenario-selector {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-selector h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.scenario-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.scenario-option {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--accent-color);
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scenario-option:hover {
+    background-color: #d4e6f7;
+}
+
+.scenario-option.active {
+    border-color: var(--primary-color);
+    background-color: #d4e6f7;
+}
+
+.scenario-option h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.email-input {
+    margin-top: 20px;
+    display: none;
+}
+
+.email-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.voice-interface {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+}
+
+.mic-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mic-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.mic-button.recording {
+    background-color: #e74c3c;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+    }
+    
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+    }
+    
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+    }
+}
+
+.status {
+    margin: 20px 0;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.conversation {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.user-message {
+    background-color: var(--accent-color);
+    margin-left: 20px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+.speaker-icon {
+    cursor: pointer;
+    color: var(--primary-color);
+    margin-left: 5px;
+}
+
+.start-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.start-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
